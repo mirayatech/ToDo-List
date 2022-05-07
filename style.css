@@ -2,7 +2,7 @@
 :root {
   --dark-color: #333;
   --white-color: #fff;
-  --delete-color: #dc0000;
+  --delete-color: #dd0101;
   --font-Acme: "Acme", sans-serif;
 }
 
@@ -17,6 +17,10 @@
 
 body {
   background-image: linear-gradient(90deg, #a8dffd 0%, #2491ff 100%);
+}
+
+li {
+    list-style: none;
 }
 
 /* ----------------
@@ -93,7 +97,7 @@ body {
     cursor: pointer;
     transition: all .3s ease;
   background: var(--white-color);
-  padding: 10px 15px;
+  padding: 8px 15px;
   border-radius: 50%;
   border: 2px solid rgb(236, 236, 236);
   outline: none;
@@ -102,11 +106,67 @@ body {
 .todo__button i {
     transition: all .3s ease;
   color: #2285e9;
-  font-size: calc(20 / 16 * 1rem);
+  font-size: calc(25 / 16 * 1rem);
   pointer-events: none;
 }
 
 .todo__button:hover i {
    color: #2286e9ce;
     transform: rotate(45deg);
+}
+
+/* Todo Div */
+
+.todo__div {
+    display: flex;
+    justify-content: space-between; margin: 30px 0;
+}
+
+/* Todo Div - Li */
+
+.todo__item {
+    flex: 1;
+    margin-right: 50px;
+    background: var(--white-color);
+    font-size: calc(18 / 16 * 1rem);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid rgb(236, 236, 236);
+}
+
+/* Todo Div - button */
+
+.todo__div button {
+    cursor: pointer;
+    transition: all .3s ease;
+  background: var(--white-color);
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: 2px solid rgb(236, 236, 236);
+  outline: none;
+}
+
+.todo__div button i {
+    transition: all .3s ease;
+  font-size: calc(18 / 16 * 1rem);
+  pointer-events: none; 
+}
+
+.edit__button {
+    margin-right: 15px;
+    color: var(--dark-color);
+    transition: all .3s ease;
+}
+
+.delete__button {
+    color: var(--delete-color);
+    transition: all .3s ease;
+}
+
+.delete__button:hover i {
+    color: #ff0000;
+}
+
+.edit__button:hover i {
+    color: rgb(80, 79, 79);
 }
