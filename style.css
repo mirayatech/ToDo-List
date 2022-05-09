@@ -3,6 +3,7 @@
   --dark-color: #333;
   --white-color: #fff;
   --delete-color: #dd0101;
+  --check-color:#4AB516;
   --font-Acme: "Acme", sans-serif;
 }
 
@@ -13,6 +14,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: all .3s ease;
+
 }
 
 body {
@@ -20,7 +23,7 @@ body {
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 /* ----------------
@@ -94,8 +97,8 @@ li {
 }
 
 .todo__button {
-    cursor: pointer;
-    transition: all .3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
   background: var(--white-color);
   padding: 8px 15px;
   border-radius: 50%;
@@ -104,41 +107,44 @@ li {
 }
 
 .todo__button i {
-    transition: all .3s ease;
+  transition: all 0.3s ease;
   color: #2285e9;
   font-size: calc(25 / 16 * 1rem);
   pointer-events: none;
 }
 
 .todo__button:hover i {
-   color: #2286e9ce;
-    transform: rotate(45deg);
+  color: #2286e9ce;
+  transform: rotate(45deg);
 }
 
 /* Todo Div */
 
 .todo__div {
-    display: flex;
-    justify-content: space-between; margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
 }
 
 /* Todo Div - Li */
 
 .todo__item {
-    flex: 1;
-    margin-right: 50px;
-    background: var(--white-color);
-    font-size: calc(18 / 16 * 1rem);
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: 2px solid rgb(236, 236, 236);
+  flex: 1;
+  margin-right: 50px;
+  background: var(--white-color);
+  font-size: calc(18 / 16 * 1rem);
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid rgb(236, 236, 236);
+  width: 280px;
+
 }
 
 /* Todo Div - button */
 
 .todo__div button {
-    cursor: pointer;
-    transition: all .3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
   background: var(--white-color);
   padding: 10px 15px;
   border-radius: 50%;
@@ -147,26 +153,33 @@ li {
 }
 
 .todo__div button i {
-    transition: all .3s ease;
+  transition: all 0.3s ease;
   font-size: calc(18 / 16 * 1rem);
-  pointer-events: none; 
+  pointer-events: none;
 }
 
-.edit__button {
-    margin-right: 15px;
-    color: var(--dark-color);
-    transition: all .3s ease;
+.check__button {
+  margin-right: 15px;
+  color: var(--check-color);
+  transition: all 0.3s ease;
 }
 
 .delete__button {
-    color: var(--delete-color);
-    transition: all .3s ease;
+  color: var(--delete-color);
+  transition: all 0.3s ease;
 }
 
 .delete__button:hover i {
-    color: #ff0000;
+  color: #ff0000;
 }
 
-.edit__button:hover i {
-    color: rgb(80, 79, 79);
+.check__button:hover i {
+  color: #26d46c;
+}
+
+/* Animation - Delete Todo */
+.checked {
+  opacity: 0.5;
+  text-decoration: line-through;
+  transition: all .3s ease;
 }

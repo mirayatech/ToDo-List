@@ -6,6 +6,7 @@ const todoList = document.querySelector(".todo__list");
 
 // Event
 todoButton.addEventListener("click", addTodo);
+todoList.addEventListener("click", checkAndDelete);
 
 // Fucntions
 function addTodo(e) {
@@ -22,10 +23,10 @@ function addTodo(e) {
   todoDiv.appendChild(todoItem);
 
   // Create Edit Button
-  const editButton = document.createElement("button");
-  editButton.classList.add("edit__button");
-  editButton.innerHTML = '<i class="fa-solid fa-pencil"></i>';
-  todoDiv.appendChild(editButton);
+  const checkButton = document.createElement("button");
+  checkButton.classList.add("check__button");
+  checkButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+  todoDiv.appendChild(checkButton);
 
   // Create Delete Button
   const deleteButton = document.createElement("button");
@@ -36,5 +37,25 @@ function addTodo(e) {
   // Append to TodoList
   todoList.appendChild(todoDiv);
 
-  todoInput.value = '';
+  todoInput.value = "";
+}
+
+// Function - Edit Todo
+function checkAndDelete(event) {
+  const item = event.target;
+
+  const checkButton = document.querySelector(".edit__button");
+
+  //Delete Todo
+  if (item.classList[0] === "delete__button") {
+    const todo = item.parentElement;
+    todo.remove();
+  }
+
+  // Check Todo
+    //Check mark
+    if(item.classList[0] === 'check__button'){
+      const todo = item.parentElement;
+      todo.classList.toggle('checked');
+    }
 }
