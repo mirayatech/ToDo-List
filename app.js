@@ -8,7 +8,12 @@ const todoList = document.querySelector(".todo__list");
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", checkAndDelete);
 
-// Fucntions
+// Function Popup Box
+function togglePopup() {
+  document.getElementById("popup-1").classList.toggle("active");
+}
+
+// Fucntion Creat The Todo Item
 function addTodo(e) {
   e.preventDefault();
 
@@ -53,9 +58,9 @@ function checkAndDelete(event) {
   }
 
   // Check Todo
-    //Check mark
-    if(item.classList[0] === 'check__button'){
-      const todo = item.parentElement;
-      todo.classList.toggle('checked');
-    }
+  //Check mark
+  if (item.classList[0] === "check__button") {
+    const todo = item.parentElement;
+    todo.classList.toggle("checked");
+  }
 }

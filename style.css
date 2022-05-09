@@ -3,7 +3,7 @@
   --dark-color: #333;
   --white-color: #fff;
   --delete-color: #dd0101;
-  --check-color:#4AB516;
+  --check-color: #4ab516;
   --font-Acme: "Acme", sans-serif;
 }
 
@@ -14,8 +14,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  transition: all .3s ease;
-
+  transition: all 0.3s ease;
 }
 
 body {
@@ -26,6 +25,79 @@ li {
   list-style: none;
 }
 
+/* ----------------
+------POPUP BOX----
+------------------- */
+
+.popup .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0,0, 0.4);
+  z-index: 1;
+  display: none;
+}
+
+.popup .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: var(--white-color);
+  width: 500px;
+  height: 360px;
+  z-index: 2;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 2px solid rgb(236, 236, 236);
+}
+
+.popup .content h1 {
+  font-size: calc(25 / 16 * 1rem);
+  text-transform: uppercase;
+  color: var(--dark-color);
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.popup .content p {
+  font-size: calc(17 / 16 * 1rem);
+  color: #757575;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding-bottom: 20px;
+}
+
+.popup .content .close__button {
+  color: var(--white-color);
+  padding: 8px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  background: #389bff;
+  font-weight: 500;
+  cursor: pointer;
+  
+}
+
+.popup .content .close__button:hover {
+  background: #208fff;
+  }
+  
+
+.popup.active .overlay{
+display: block;
+}
+
+.popup.active .content {
+  transition: all .6s ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+
+}
 /* ----------------
 -------HEADER------
 ------------------- */
@@ -137,7 +209,6 @@ li {
   border-radius: 30px;
   border: 2px solid rgb(236, 236, 236);
   width: 280px;
-
 }
 
 /* Todo Div - button */
@@ -181,5 +252,5 @@ li {
 .checked {
   opacity: 0.5;
   text-decoration: line-through;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }

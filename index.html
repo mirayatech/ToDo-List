@@ -18,10 +18,23 @@
 
 <body>
 
+    <!-- Popup Box -->
+
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>This is how it works:</h1>
+            <p>Write your tasks in the input, where it says "Add an item..." and press on the blue X to add them. You
+                will then see your tasks with a check button and delete button. Press the check button, if you are done
+                with a task. Press the delete button, if you want to delete a task.</p>
+            <button class="close__button" onclick="togglePopup()">Ok</button>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <h1 class="header__heading">Order of the day</h1>
-        <h2 class="header__info"> Click on me to see how it works!</h2>
+        <h2 class="header__info" onclick='togglePopup()'> Click on me to see how it works!</h2>
     </header>
 
     <!-- Main - Input, Button -->
