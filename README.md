@@ -10,3 +10,17 @@ A `Todo List` where you can organize your day everyday. If you do not know how i
 * HTML
 * CSS
 * JavaScript
+
+
+## How it looks 🎥
+
+**Live:** https://blue-todolist.netlify.app/
+
+
+
+https://user-images.githubusercontent.com/71933266/170869110-659ac40e-8718-47e6-9b7a-925df188b1b6.mp4
+
+
+
+
+
