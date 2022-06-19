@@ -7,8 +7,6 @@
   --font-Acme: "Acme", sans-serif;
 }
 
-/* General Styling */
-
 * {
   padding: 0;
   margin: 0;
@@ -25,9 +23,6 @@ li {
   list-style: none;
 }
 
-/* ----------------
-------POPUP BOX----
-------------------- */
 
 .popup .overlay {
   position: fixed;
@@ -95,10 +90,6 @@ li {
   transition: all 0.6s ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
-/* ----------------
--------HEADER------
-------------------- */
-
 .header {
   display: flex;
   justify-content: center;
@@ -141,8 +132,6 @@ li {
   transform-origin: bottom left;
 }
 
-/* Main */
-
 .main {
   display: flex;
   flex-direction: column;
@@ -152,8 +141,6 @@ li {
 .main__form {
   margin-top: 40px;
 }
-
-/* Main - Input, Button */
 
 .todo__input {
   color: var(--dark-color);
@@ -187,16 +174,12 @@ li {
   transform: rotate(45deg);
 }
 
-/* Todo Div */
 
 .todo__div {
   display: flex;
   justify-content: space-between;
   margin: 30px 0;
 }
-
-/* Todo Div - Li */
-
 .todo__item {
   flex: 1;
   margin-right: 50px;
@@ -207,8 +190,6 @@ li {
   border: 2px solid rgb(236, 236, 236);
   width: 280px;
 }
-
-/* Todo Div - button */
 
 .todo__div button {
   cursor: pointer;
@@ -244,20 +225,13 @@ li {
 .check__button:hover i {
   color: #26d46c;
 }
-
-/* Animation - Delete Todo */
 .checked {
   opacity: 0.5;
   text-decoration: line-through;
   transition: all 0.3s ease;
 }
 
-/* ----------------------
--------MEDIA QUEEY ------
-------------------------- */
-
 @media (max-width: 530px) {
-  /* Header */
 
   .header__heading {
     font-size: calc(35 / 16 * 1rem);
@@ -267,10 +241,6 @@ li {
   .header__info {
     font-size: calc(20 / 16 * 1rem);
   }
-
-  /* ----------------
-------POPUP BOX----
-------------------- */
 
   .popup .content {
     width: 300px;
@@ -296,8 +266,6 @@ li {
     font-size: 0.9rem;
   }
 
-  /* Main - Input, Button */
-
   .todo__input {
     font-size: 1rem;
     padding: 8px 15px;
@@ -311,13 +279,10 @@ li {
   .todo__button i {
     font-size: calc(20 / 16 * 1rem);
   }
-  /* Todo Div */
 
   .todo__div {
     margin: 15px 0;
   }
-
-  /* Todo Div - Li */
 
   .todo__item {
     margin-right: 25px;
@@ -326,7 +291,6 @@ li {
     width: 200px;
   }
 
-  /* Todo Div - button */
 
   .todo__div button {
     padding: 8px 14px;
@@ -342,8 +306,6 @@ li {
 }
 
 @media (max-width: 360px) {
-  /* Header */
-
   .header__heading {
     font-size: calc(30 / 16 * 1rem);
     line-height: 2.5;
@@ -353,7 +315,6 @@ li {
     font-size: calc(18 / 16 * 1rem);
   }
 
-  /* Main - Input, Button */
 
   .todo__input {
     font-size: 1rem;
@@ -361,16 +322,12 @@ li {
     width: 230px;
   }
 
-  /* Todo Div - Li */
-
   .todo__item {
     margin-right: 20px;
     font-size: 1rem;
     padding: 8px 15px;
     width: auto;
   }
-
-  /* Todo Div - button */
 
   .todo__div button {
     padding: 8px 14px;
