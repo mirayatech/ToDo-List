@@ -14,7 +14,6 @@ A `Todo List` where you can organize your day everyday. If you do not know how i
 
 ## How it looks 🎥
 
-**Live:** https://blue-todolist.netlify.app/
 
 
 
